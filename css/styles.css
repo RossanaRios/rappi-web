@@ -1,0 +1,234 @@
+html {
+    font-size: 16px;
+}
+body {
+	margin: 0px;
+	background-color: #CECFCE;    
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    color: #333;
+    font-size: 62.5%; /* 1em = 10px */
+}
+.container {
+    width: 100%; 
+    padding-top: 180px; 
+}
+.loading {
+    display: block;
+    /*background-color: #FFFFFF;*/
+    text-align: center;
+    width: 100%;
+    min-height: 100%;
+    height: auto !important;
+    background-color: rgba(255,255,255,0.6);
+    z-index: 1000;
+    position: fixed;
+    top: 0px !important;
+
+}
+.loadmask {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    background-color: rgba(255, 255, 255, 0.5);
+    z-index: 9999;      
+}
+.loading .info-load {
+    color: #ff6d5a;    
+    margin: 0;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+.loading .info-load i {
+    font-size: 20em;
+    display: block;
+    margin-left: 40px;
+}
+.loading .info-load span {
+    font-size: 4em;
+    display: block;
+    margin-top: 0px;
+    background-color: #CECFCE;
+}
+.header {
+	width: 100%;
+    height: 70px;
+    background-color: #ff6d5a;
+    position: fixed;
+    top: 0%;
+    z-index: 999;
+    padding: 30px;
+}
+.header .title {    
+    display: inline-block;    
+    font-size: 4em;
+    width: 80%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: white;
+    margin-left: 20px;
+    vertical-align: middle;
+    height: 100%;
+}
+.header i {
+    color: white;
+    font-size: 7em;
+    cursor: pointer;    
+}
+
+.news {    
+    padding: 20px;
+    min-height: 100px;
+    background-color: white;    
+    margin-bottom: 10px;
+}
+
+.search {    
+    padding: 15px;
+    min-height: 50px;
+    background-color: white;    
+    margin-bottom: 10px;
+}
+.search-item {    
+    width: 80%;
+    margin: auto;
+}
+
+.news-item {
+    width: 80%;
+    margin: auto;
+}
+
+.news-item.ng-enter {
+    transition: all 0.4s cubic-bezier(.87,-.41,.19,1.44);
+    opacity: 0;
+    margin-left: -100%;
+}
+
+.news-item.ng-enter.ng-enter-active {
+    opacity: 1;
+    margin-left: 0px;
+}
+
+.news .img {
+    height: 100px;
+    width: 100px;
+    border-radius: 50px;
+    display: inline-block;
+    vertical-align: middle;    
+    margin: 0px 30px 0px 10px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.news .title {    
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 4em;
+    width: 80%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    border-bottom-width: 2px;
+    border-bottom-color: #CECFCE;
+    border-bottom-style: solid;
+}
+.news-detail {    
+    height: 300px;
+    background-color: #f7f2f2;
+    margin-bottom: 10px;  
+    opacity: 1 !important;
+    visibility: visible !important;       
+}
+.news-detail.ng-hide-add, .news-detail.ng-hide-remove {
+    transition: all cubic-bezier(.87,-.41,.19,1.44) 0.7s;   
+}
+.news-detail.ng-hide {        
+    height: 0;      
+    opacity: 0 !important;
+    visibility: hidden !important;    
+}
+.news-detail .body {    
+    padding: 50px;     
+}
+.news-detail img {
+    height: 100%;
+    width: 300px;
+    float: left;
+    margin-right: 50px;
+}
+.news-detail .body .title{    
+    font-size: 3em;
+    width: 100%;
+    display: block;
+}
+.news-detail .body .content{    
+    font-size: 2em;
+    line-height: 1.5em;
+    text-align: justify;
+}
+.ng-hide:not(.ng-hide-animate) {
+    opacity: 0 !important;
+    visibility: hidden !important;
+    display: block !important;
+}
+.readfile {
+    width: 100px;
+    height: 100px;
+    color: #FF6D5A;
+    position: fixed;
+    border-radius: 50%;
+    bottom: 50px;
+    right: 50px;
+    text-align: center;
+}
+.readfile:hover {    
+   color: #f76251;
+}
+.open-icon {
+    color: white;
+    font-size: 5em;
+    margin: 0;
+    margin-top: 25px;
+    margin-left: 10px;
+}
+.readfile input {
+    height: 100% !important;
+    width: 100% !important;
+    position: absolute;
+    left: 0px;
+    opacity: 0;
+    cursor: pointer;
+}
+.clamp-content {  
+  overflow: hidden;  
+  position: relative;   
+  line-height: 1.5em;  
+  max-height: 6.5em;   
+  text-align: justify;    
+  margin-right: -1em;
+  padding-right: 1em;
+}
+.clamp-content:before {  
+  content: '...';  
+  position: absolute;  
+  right: 2px;
+  bottom: 2px;
+}
+.clamp-content:after {  
+  content: '';  
+  position: absolute;  
+  right: 0;  
+  width: 1em;
+  height: 1em;
+  margin-top: 0.2em;  
+  background: #f7f2f2;
+}
+html.md-default-theme, html, body.md-default-theme, body{
+    background-color: #CECFCE !important;
+}
